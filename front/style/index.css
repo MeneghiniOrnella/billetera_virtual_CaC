@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 :root {
     --color-purple: #67238B;
@@ -12,7 +12,6 @@
     background-color: var(--color-blue);
     font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight: <weight>;
     font-style: normal;
     font-variation-settings:"wdth" 100,"YTLC" 500;
 }
@@ -106,4 +105,296 @@ h2 {
 
 .options_money button:hover {
     transform: translateY(-2px);
+} */
+
+/* Estilos para el Header */
+
+header 
+{
+    background: linear-gradient(135deg, #67238B 30%, #693190 70%);
+}
+.navbar-brand {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(45deg, #693190 0%, #a54faa 50%, #693190 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header .navbar-nav .nav-link:hover {
+    color: #E8C547 !important;
+}
+
+.navbar-nav .nav-link {
+    color: #E7EAE2 !important;
+    font-weight: bold; 
+    font-size: 18px; 
+    text-transform: uppercase;
+    margin-right: 15px;
+    transition: 0.5s;
+    font-style: italic;
+}
+
+.down-arrow-toggler .navbar-toggler-icon.material-icons {
+    font-family: 'Material Symbols Outlined';
+    font-size: 24px;
+    color: #E7EAE2;
+}
+
+.navbar-nav .nav-item {
+    transition: transform 0.5s ease-in-out; /* Transición de escala */
+}
+
+.navbar-nav .nav-item:hover {
+    transform: scale(1.20); /* Aumentar la escala al pasar el ratón */
+}
+
+/* Estilos para el Body */
+
+body {
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    padding-bottom: 100px;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+/* Estilos para la sección "Sobre Nosotros" */
+
+#about {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 80px 20px;
+    border-radius: 10px; 
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+#about h2 {
+    font-size: 3rem;
+    color: #67238B;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#about p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+#about .col-lg-6 img {
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out; /* Transición de escala */
+}
+
+#about .col-lg-6 img:hover {
+    transform: scale(1.05); /* Aumentar la escala al pasar el ratón */
+}
+
+/* Estilo adicional para la imagen en celulares */
+
+@media (max-width: 768px) {
+    #about .col-lg-6 img {
+        width: 100%;
+    }
+}
+
+.carousel-inner img {
+    height: 300px;
+    object-fit: cover; /* Escala la imagen para que se ajuste al contenedor manteniendo la relación de aspecto */
+  }
+
+/* Estilos para la sección "Como Funciona el Producto" */
+
+#how-it-works {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+  }
+  
+#how-it-works h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #67238B;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+  
+#how-it-works .card {
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+  
+#how-it-works .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+  
+#how-it-works .card-title {
+    font-size: 1.5rem;
+    color: #67238B;
+    font-weight: bold;
+}
+  
+#how-it-works .card-text {
+    font-size: 1.1rem;
+    color: #555;
+}
+  
+#how-it-works .card-body {
+    padding: 30px;
+}
+  
+@media (max-width: 768px) {
+#how-it-works h2 {
+      font-size: 2rem;
+ }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns="http://www.w3.org/2000/svg" fill="%2367238B" viewBox="0 0 8 8"%3e%3cpath d="M6.25 0.793l-4 4a.999.999 0 000 1.414l4 4a.999.999 0 101.414-1.414L3.414 4l4.25-4.25a.999.999 0 000-1.414.999.999 0 00-1.414 0z" /%3e%3c/svg%3e');
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.carousel-control-next-icon {
+    transform: scaleX(-1); /* Invertir la flecha horizontalmente */
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns="http://www.w3.org/2000/svg" fill="%23FFFFFF" viewBox="0 0 8 8"%3e%3cpath d="M6.25 0.793l-4 4a.999.999 0 000 1.414l4 4a.999.999 0 101.414-1.414L3.414 4l4.25-4.25a.999.999 0 000-1.414.999.999 0 00-1.414 0z" /%3e%3c/svg%3e');
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: auto;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+/* Estilos para la sección "Contacto" */
+
+#contact {
+    padding: 60px 0;
+    margin-bottom: 150px;
+    background-color: #f8f9fa;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #67238B; 
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#contact p,
+#contact form .form-label {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.8;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact form .form-label {
+    font-weight: bold;
+}
+
+#contact form .form-control {
+    margin-bottom: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.1rem;
+}
+
+#contact form textarea.form-control {
+    resize: none;
+}
+
+#contact form button[type="submit"] {
+    background-color: #67238B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 80px;
+    font-size: 1.1rem;
+}
+
+#contact form button[type="submit"]:hover {
+    background-color: #500b6b;
+}
+
+.btn-primary {
+    background-color: #67238B;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #500b6b;
+}
+
+.section-divider {
+    background-color: #f8f9fa; /* Un tono suave que complementa el diseño existente */
+}
+
+/* Estilos para el Footer */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #67238B 30%, #693190 70%);
+    color: #E7EAE2;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300; 
+    font-size: 16px;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 10px 0; /* Reducir el padding aún más para dispositivos celulares */
+    }
+}
+
+.footer-social-icons .list-inline-item a {
+    font-size: 24px;
+    color: #E7EAE2 !important;
+    margin-right: 20px;
+    transition: transform 0.5s ease-in-out, color 0.5s; /* Agregar la misma transición para transform y color */
+}
+
+.footer-social-icons .list-inline-item a:hover {
+    color: #E8C547 !important; /* Cambiar el color al pasar el ratón */
+    transform: scale(1.2); /* Aumentar la escala al pasar el ratón */
 }
