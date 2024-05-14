@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 :root {
     --color-purple: #67238B;
@@ -7,7 +7,10 @@
     --color-grey: #E7EAE2;
 }
 
-* {
+
+/* Estilos para el Header */
+
+.product * {
     box-sizing: border-box;
     background-color: var(--color-blue);
     font-family: "Nunito Sans", sans-serif;
@@ -16,7 +19,7 @@
     font-variation-settings:"wdth" 100,"YTLC" 500;
 }
 
-body {
+.product body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,14 +27,15 @@ body {
     margin: 0;
 }
 
-p, 
-span, 
-h2, 
-h3 {
+.product :is(
+    p, 
+    span, 
+    h2, 
+    h3) {
     background-color: var(--color-grey);
 }
 
-h2 {
+.product h2 {
     font-size: 3rem;
 }
 
@@ -45,6 +49,7 @@ h2 {
     padding: .5em 1em;
     background-color: var(--color-blue);
 }
+
 
 .money_account,
 .your_activity {
@@ -71,8 +76,9 @@ h2 {
     background-color: var(--color-grey);
 }
 
-.amount p,
-.amount span {
+.amount :is(
+    p,
+    span) {
     margin: 0;
     text-align: left;
     text-transform: capitalize;
@@ -105,13 +111,13 @@ h2 {
 
 .options_money button:hover {
     transform: translateY(-2px);
-} */
+}
 
 /* Estilos para el Header */
 
 header 
 {
-    background: linear-gradient(135deg, #67238B 30%, #693190 70%);
+    background: linear-gradient(135deg, var(--color-purple) 30%, #693190 70%);
 }
 .navbar-brand {
     font-family: "Roboto", sans-serif;
@@ -125,11 +131,11 @@ header
 }
 
 header .navbar-nav .nav-link:hover {
-    color: #E8C547 !important;
+    color: var(--color-yellow) !important;
 }
 
 .navbar-nav .nav-link {
-    color: #E7EAE2 !important;
+    color: var(--color-grey) !important;
     font-weight: bold; 
     font-size: 18px; 
     text-transform: uppercase;
@@ -141,7 +147,7 @@ header .navbar-nav .nav-link:hover {
 .down-arrow-toggler .navbar-toggler-icon.material-icons {
     font-family: 'Material Symbols Outlined';
     font-size: 24px;
-    color: #E7EAE2;
+    color: var(--color-grey);
 }
 
 .navbar-nav .nav-item {
@@ -174,7 +180,7 @@ body {
 
 #about h2 {
     font-size: 3rem;
-    color: #67238B;
+    color: var(--color-purple);
     font-weight: bold;
     font-family: 'Roboto Condensed', sans-serif; 
     text-transform: uppercase;
@@ -223,7 +229,7 @@ body {
     font-size: 2.5rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: #67238B;
+    color: var(--color-purple);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
   
@@ -242,7 +248,7 @@ body {
   
 #how-it-works .card-title {
     font-size: 1.5rem;
-    color: #67238B;
+    color: var(--color-purple);
     font-weight: bold;
 }
   
@@ -299,7 +305,7 @@ body {
 #contact h2 {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #67238B; 
+    color: var(--color-purple); 
     margin-bottom: 30px;
     text-transform: uppercase;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -334,7 +340,7 @@ body {
 }
 
 #contact form button[type="submit"] {
-    background-color: #67238B;
+    background-color: var(--color-purple);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -350,7 +356,7 @@ body {
 }
 
 .btn-primary {
-    background-color: #67238B;
+    background-color: var(--color-purple);
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -372,8 +378,8 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: linear-gradient(135deg, #67238B 30%, #693190 70%);
-    color: #E7EAE2;
+    background: linear-gradient(135deg, var(--color-purple) 30%, #693190 70%);
+    color: var(--color-grey);
     font-family: 'Roboto', sans-serif;
     font-weight: 300; 
     font-size: 16px;
@@ -389,12 +395,12 @@ footer {
 
 .footer-social-icons .list-inline-item a {
     font-size: 24px;
-    color: #E7EAE2 !important;
+    color: var(--color-grey) !important;
     margin-right: 20px;
     transition: transform 0.5s ease-in-out, color 0.5s; /* Agregar la misma transición para transform y color */
 }
 
 .footer-social-icons .list-inline-item a:hover {
-    color: #E8C547 !important; /* Cambiar el color al pasar el ratón */
+    color: var(--color-yellow) !important; /* Cambiar el color al pasar el ratón */
     transform: scale(1.2); /* Aumentar la escala al pasar el ratón */
 }

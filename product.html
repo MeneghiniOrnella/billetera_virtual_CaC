@@ -13,17 +13,6 @@
 </head>
 <body>
     <div id="header"></div>
-<script>
-    fetch('./components/header.html') // Ajustando la ruta relativa correctamente
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.text();
-        })
-        .then(html => document.getElementById('header').innerHTML = html)
-        .catch(error => console.error('Error loading the header:', error));
-</script>
     <div class="product">
         <div class="money_account">
             <div class="money_number">
@@ -56,5 +45,26 @@
             </div>
         </div>
     </div>
+
+    <script>
+        fetch('./components/header.html') // Ajustando la ruta relativa correctamente
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(html => document.getElementById('header').innerHTML = html)
+            .catch(error => console.error('Error loading the header:', error));
+        fetch('./components/footer.html') // Ajustando la ruta relativa correctamente
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(html => document.getElementById('footer').innerHTML = html)
+            .catch(error => console.error('Error loading the footer:', error));
+    </script>
 </body>
 </html>
