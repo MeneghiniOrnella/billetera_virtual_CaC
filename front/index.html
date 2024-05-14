@@ -38,16 +38,13 @@
             <div id="carouselExampleControls" class="carousel slide pointer-events-none" data-bs-ride="carousel" data-bs-interval="4000"> <!-- data-bs-interval establece el intervalo en milisegundos -->
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="img/Fotolia_182043508_Subscription_Monthly_M.jpg" class="d-block w-100" alt="Slide 1">
+                  <img src="img/credit-card-6389523_1280.jpg" class="d-block w-100" alt="Slide 1">
                 </div>
                 <div class="carousel-item">
-                  <img src="img/billetera-virtual.jpg" class="d-block w-100" alt="Slide 2">
+                  <img src="img/gift-4222336_1280.jpg" class="d-block w-100" alt="Slide 2">
                 </div>
                 <div class="carousel-item">
-                  <img src="img/billetera-virtual (1).jpg" class="d-block w-100" alt="Slide 3">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/billetera.jpg" class="d-block w-100" alt="Slide 4">
+                  <img src="img/leather-3080553_1280.jpg" class="d-block w-100" alt="Slide 3">
                 </div>
               </div>
             </div>
@@ -153,6 +150,19 @@
         </form>
       </div>
     </section>
+
+    <div id="footer"></div>
+      <script>
+        fetch('./components/footer.html') // Ajustando la ruta relativa correctamente
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Network response was not ok');
+              }
+              return response.text();
+          })
+          .then(html => document.getElementById('footer').innerHTML = html)
+          .catch(error => console.error('Error loading the footer:', error));
+      </script>
 
 <script src="https://kit.fontawesome.com/d224e4f555.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
